@@ -6,12 +6,9 @@ import {
   PreloadAllModules,
 } from '@angular/router';
 
-import { ProductsComponent } from './components/products/products.component';
-import { ContactComponent } from './components/contact/contact.component';
-import { DemoComponent } from './components/demo/demo.component';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
-import { ProductDetailComponent } from './components/product-detail/product-detail.component';
-import { LayoutComponent } from './components/layout/layout.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { ProductDetailComponent } from './product/components/product-detail/product-detail.component';
+import { LayoutComponent } from './layout/layout.component';
 
 const routes: Routes = [
   {
@@ -26,27 +23,28 @@ const routes: Routes = [
       {
         path: 'home',
         loadChildren: () =>
-          import('./components/home/home.module').then(
-            (module) => module.HomeModule
-          ),
+          import('./home/home.module').then((module) => module.HomeModule),
       },
       {
         path: 'products',
-        component: ProductsComponent,
-      },
-      {
-        path: 'products/:id',
-        component: ProductDetailComponent,
+        loadChildren: () =>
+          import('./product/product.module').then(
+            (module) => module.ProductModule
+          ),
       },
       {
         path: 'contact',
-        component: ContactComponent,
+        loadChildren: () =>
+          import('./contact/contact.module').then(
+            (module) => module.ContactModule
+          ),
       },
     ],
   },
   {
     path: 'demo',
-    component: DemoComponent,
+    loadChildren: () =>
+      import('./demo/demo.module').then((module) => module.DemoModule),
   },
 
   {
