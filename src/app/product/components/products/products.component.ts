@@ -12,7 +12,7 @@ export class ProductsComponent implements OnInit {
 
   constructor(private productsService: ProductsService) {}
 
-  ngOnInit() {
+  ngOnInit(): void {
     this.fetchProducts();
   }
 
@@ -21,7 +21,7 @@ export class ProductsComponent implements OnInit {
     console.log(id);
   }
 
-  fetchProducts() {
+  fetchProducts(): void {
     this.productsService
       .getAllProducts()
       .subscribe((products) => (this.products = products));
