@@ -23,4 +23,8 @@ export class ProductsService {
   updateProduct(id: string, changes: Partial<IProduct>) {
     return this.http.put(`${environment.API_URL}`, changes);
   }
+
+  deleteProduct(id: string) {
+    return this.http.delete(`${environment.API_URL}/${id}`);
+  }
 }
