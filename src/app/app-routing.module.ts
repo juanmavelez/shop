@@ -9,6 +9,7 @@ import {
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ProductDetailComponent } from './product/components/product-detail/product-detail.component';
 import { LayoutComponent } from './layout/layout.component';
+import { AdminGuard } from './guards/admin/admin.guard';
 
 const routes: Routes = [
   {
@@ -34,6 +35,7 @@ const routes: Routes = [
       },
       {
         path: 'contact',
+        canActivate: [AdminGuard],
         loadChildren: () =>
           import('./contact/contact.module').then(
             (module) => module.ContactModule
@@ -46,7 +48,11 @@ const routes: Routes = [
     loadChildren: () =>
       import('./demo/demo.module').then((module) => module.DemoModule),
   },
-
+  {
+    path: 'admin',
+    loadChildren: () =>
+      import('./admin/admin.module').then((module) => module.AdminModule),
+  },
   {
     path: '**',
     component: PageNotFoundComponent,
