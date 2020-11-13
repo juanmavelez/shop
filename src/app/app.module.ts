@@ -12,6 +12,7 @@ import { LayoutComponent } from './layout/layout.component';
 import { SharedModule } from './shared/shared.module';
 import { CoreModule } from './core/core.module';
 import { environment } from '../environments/environment';
+import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({
   declarations: [AppComponent, PageNotFoundComponent, LayoutComponent],
@@ -25,6 +26,7 @@ import { environment } from '../environments/environment';
     AngularFireModule.initializeApp(environment.firebaseConfig),
     AngularFirestoreModule,
     AngularFireAuthModule,
+    LayoutModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

@@ -9,7 +9,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { Router } from '@angular/router';
-import { Observable, pipe } from 'rxjs';
+import { Observable } from 'rxjs';
 import { ProductsService } from '../../../core/services/products/products.service';
 import { MyValidators } from '../../../utils/customValidators';
 
@@ -35,7 +35,7 @@ export class FormProductComponent implements OnInit {
 
   private buildForm(): void {
     this.form = this.formBuilder.group({
-      id: ['', [Validators.required]],
+      id: ['', [Validators.required, Validators.min]],
       title: ['', [Validators.required]],
       price: ['', [Validators.required, MyValidators.isPriceValid]],
       image: [''],

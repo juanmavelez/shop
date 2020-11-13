@@ -56,12 +56,9 @@ export class ProductEditComponent implements OnInit {
           console.log(newProduct), this.router.navigate(['./admin/products']);
         });
     }
-    console.log(this.form.value);
   }
 
   get priceField(): AbstractControl {
     return this.form.get('price');
   }
 }
-
-message: 'Http failure response for https://platzi-store.herokuapp.com/products: 404 Not Found';
