@@ -6,9 +6,8 @@ import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
 
-import { MaterialModule } from './../material/material.module';
-import { SharedModule } from './../shared/shared.module';
-
+import { MaterialModule } from '@material/material.module';
+import { SharedModule } from '@shared/shared.module';
 
 @NgModule({
   declarations: [LoginComponent, RegisterComponent],
@@ -17,7 +16,7 @@ import { SharedModule } from './../shared/shared.module';
     AuthRoutingModule,
     SharedModule,
     MaterialModule,
-    ReactiveFormsModule
-  ]
+    ReactiveFormsModule,
+  ],
 })
-export class AuthModule { }
+export class AuthModule {}

@@ -6,8 +6,8 @@ import {
   Validators,
 } from '@angular/forms';
 import { ActivatedRoute, Router, Params } from '@angular/router';
-import { ProductsService } from '../../../core/services/products/products.service';
-import { MyValidators } from '../../../utils/customValidators';
+import { ProductsService } from '@core/services/products/products.service';
+import { MyValidators } from '@utils/customValidators';
 
 @Component({
   selector: 'app-product-edit',

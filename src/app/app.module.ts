@@ -9,9 +9,9 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { LayoutComponent } from './layout/layout.component';
-import { SharedModule } from './shared/shared.module';
-import { CoreModule } from './core/core.module';
-import { environment } from '../environments/environment';
+import { SharedModule } from '@shared/shared.module';
+import { CoreModule } from '@core/core.module';
+import { environment } from '@environments/environment';
 import { LayoutModule } from '@angular/cdk/layout';
 
 @NgModule({

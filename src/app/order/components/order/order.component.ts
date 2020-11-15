@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { IProduct } from '../../../product.model';
-import { CartService } from '../../../core/services/cart/cart.service';
+import { IProduct } from '@core/product.model';
+import { CartService } from '@core/services/cart/cart.service';
 import { Observable } from 'rxjs';
 @Component({
   selector: 'app-order',

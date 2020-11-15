@@ -10,8 +10,8 @@ import {
 } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
-import { ProductsService } from '../../../core/services/products/products.service';
-import { MyValidators } from '../../../utils/customValidators';
+import { ProductsService } from '@core/services/products/products.service';
+import { MyValidators } from '@utils/customValidators';
 
 @Component({
   selector: 'app-form-product',
