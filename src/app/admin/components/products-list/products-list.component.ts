@@ -21,7 +21,7 @@ export class ProductsListComponent implements OnInit {
     });
   }
 
-  deleteProduct(id: string) {
+  deleteProduct(id: string): void {
     this.productsService.deleteProduct(id).subscribe((rta) => {
       this.fetchProducts();
     });
